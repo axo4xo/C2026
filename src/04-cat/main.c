@@ -5,9 +5,8 @@ void meow(size_t n);
 int get_positive_int(void);
 
 int main(void) {
-    int32_t n = get_positive_int();
-
-    meow(n);
+    int32_t times = get_positive_int();
+    meow(times);
 }
 
 int get_positive_int(void) {

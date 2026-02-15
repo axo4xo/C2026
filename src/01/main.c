@@ -1,5 +1,5 @@
 #include <stdio.h> // libraries are accessed by header files
-#include "../lib/ax4-01.h"
+#include "../../include/ax4-01.h"
 #include <stdlib.h>
 
 int main(void) { 

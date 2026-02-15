@@ -24,3 +24,12 @@ char* get_string(char* input) {
     
     return userin;
 }
+
+char get_char(char* input) {
+    char letter;
+
+    printf("%s", input);
+    scanf("%c", &letter); // zapisujeme NA ADRESU
+
+    return letter;
+}

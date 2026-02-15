@@ -1,5 +1,5 @@
 #include <stdio.h> // libraries are accessed by header files
-#include "../../include/input_utils.h"
+#include "input_utils.h"
 #include <stdlib.h>
 
 int main(void) { 

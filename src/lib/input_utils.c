@@ -1,9 +1,19 @@
+#include "../../include/input_utils.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
-#include "../../include/ax4_string.h"
+#include <stdlib.h>
 
-string get_string(string input) {
+int32_t get_int(char* input) {
+    int32_t num;
+
+    printf("%s", input);
+    scanf("%i", &num);
+    
+    return num;
+}
+
+char* get_string(char* input) {
     char *userin;
     userin = malloc(100);
 

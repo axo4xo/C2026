@@ -1,2 +1,2 @@
-main: ../lib/ax4_int.c main.c
-	cc main.c ../lib/ax4_int.c -o main
+main: ../lib/input_utils.c main.c
+	cc main.c ../lib/input_utils.c -o main

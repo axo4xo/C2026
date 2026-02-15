@@ -1,10 +1,7 @@
 #include <stdio.h>
 
 // size_t - unsigned, dává větší smysl
-typedef enum {
-    HORIZONTALLY,
-    VERTICALLY,
-} Orientation;
+typedef enum { HORIZONTALLY, VERTICALLY } Orientation;
 
 void print_block(size_t x, size_t y, char);
 void print_symbols(size_t x, char, Orientation);

@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdint.h>
 #include "input_utils.h"
 
+// prototypes
 void meow(size_t n);
 int get_positive_int(void);
 

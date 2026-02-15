@@ -1,8 +1,5 @@
-SOURCES = $(wildcard .*c)
-TARGET = main
-
-$(TARGET): $(SOURCES)
-	cc $(SOURCES) -I../../include -o $(TARGET)
+all:
+	@for dir in src/*/main.c; do cc "$$dir" src/lib/*.c -I./include -o "$${dir%%.c}" && echo "OK: $$dir"; done
 
 clean:
-	rm -f $(TARGET)
+	@find src -name main -type f -delete

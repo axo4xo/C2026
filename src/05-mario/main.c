@@ -1,16 +1,25 @@
 #include <stdio.h>
-#include <stdint.h>
 
-void print_question_marks(int32_t);
+// size_t - signed, dává větší smysl
+void print_horizontally(size_t, char);
+void print_vertically(size_t, char);
 
 int main(void) {
-    print_question_marks(7);
+    print_horizontally(7, '?');
+    printf("---\n");
+    print_vertically(5, '#');
 }
 
-void print_question_marks(int32_t n) {
+void print_horizontally(size_t n, char symbol) {
     for (size_t i = 0; i < n; i++)
     {
-        printf("?");
+        printf("%c", symbol);
     }
     printf("\n");
+}
+
+void print_vertically(size_t n, char symbol) {
+    for (size_t i = 0; i < n; i++) {
+        printf("%c\n", symbol);
+    }
 }

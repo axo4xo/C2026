@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// size_t - signed, dává větší smysl
+// size_t - unsigned, dává větší smysl
 void print_horizontally(size_t, char);
 void print_vertically(size_t, char);
 void print_block(size_t x, size_t y, char);

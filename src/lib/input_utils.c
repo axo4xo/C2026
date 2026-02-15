@@ -16,7 +16,7 @@ int32_t get_int(char* input) {
             return num;
         }
         printf("To nebylo platný číslo. Znova a lépe. \n");
-        while (getchar() != '\n');
+        while (getchar() != '\n'); // cleanup buffer
     }   
 }
 

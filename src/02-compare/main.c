@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../../include/ax4-02.h"
+#include "../../include/ax4_int.h"
 
 int main(void) {
     int x = get_int("Zadej x: ");

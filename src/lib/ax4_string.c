@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../include/ax4-01.h"
+#include "../../include/ax4_string.h"
 
 string get_string(string input) {
     char *userin;

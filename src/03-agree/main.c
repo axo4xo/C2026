@@ -3,5 +3,5 @@
 
 int main(void) {
     char agreement = get_char("Do you agree? ");
-    agreement == 'y' ? printf(":)\n") : printf(":(\n");
+    (agreement == 'y' || agreement == 'Y') ? printf("Agreed\n") : printf("Disagreed\n");
 }

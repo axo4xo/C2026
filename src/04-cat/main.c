@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include "input_utils.h"
 
+
 void meow(size_t n);
 
 int main(void) {
-    int n = get_int("Kolikrat mam zamnoukat? ");
+    int n = 1;
+    do {
+        n = get_int("Kolikrat mam zamnoukat? ");
+    } while (n <= 0);
+
     meow(n);
 }
 

@@ -6,11 +6,18 @@
 
 int32_t get_int(char* input) {
     int32_t num;
-
-    printf("%s", input);
-    scanf("%i", &num);
+    int32_t status;
     
-    return num;
+    while (1) {
+        printf("%s", input);
+        status = scanf("%i", &num);
+        
+        if (status == 1) {
+            return num;
+        }
+        printf("To nebylo platný číslo. Znova a lépe. \n");
+        while (getchar() != '\n');
+    }   
 }
 
 char* get_string(char* input) {

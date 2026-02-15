@@ -16,7 +16,7 @@ int32_t get_int(char* input) {
             return num;
         }
         printf("To nebylo platný číslo. Znova a lépe. \n");
-        while (getchar() != '\n'); // cleanup buffer
+        while (getchar() != '\n');
     }   
 }
 
@@ -36,7 +36,7 @@ char get_char(char* input) {
     char letter;
 
     printf("%s", input);
-    scanf("%c", &letter); // zapisujeme NA ADRESU
+    scanf(" %c", &letter); // zapisujeme NA ADRESU
 
     return letter;
 }

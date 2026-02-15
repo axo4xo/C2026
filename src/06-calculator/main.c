@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include "input_utils.h"
 
 int add(int32_t x, int32_t y);
 int subtract(int32_t x, int32_t y);
@@ -7,13 +8,31 @@ int multiply(int32_t x, int32_t y);
 float divide(int32_t x, int32_t y);
 
 int main(void) {
-    int32_t sum = add(3, 8);
-    int32_t mult = multiply(sum, 4);
-    printf("%d\n", mult);
-    float div = divide(mult, 5); // ???
-    printf("%f\n", div);
+    while (1) {
+        char operation = get_char("Jakou operaci dnes provedeme? (+, -, *, /, q=quit): "); 
+        if (operation == 'q') break;
+        int32_t user_x = get_int("Paráda! Zadej X: ");
+        int32_t user_y = get_int("Skvělá volba! Zadej Y: ");
 
-    float test = divide(mult, 0); // safe
+        switch (operation) {
+            case '+':
+                printf("%i\n", add(user_x, user_y));
+                break;
+            case '-':
+                printf("%i\n", subtract(user_x, user_y));
+                break;
+            case '*':
+                printf("%i\n", multiply(user_x, user_y));
+                break;
+            case '/':
+                printf("%.2f\n", divide(user_x, user_y));
+                break;
+            default:
+                printf("Neplatná operace.. zkus to znovu.\n");
+                break;
+        }
+    }
+    return 0;
 }
 
 int32_t add(int32_t x, int32_t y) {
